@@ -15,7 +15,7 @@ Unfortunately even though the code is correctly installed at the correct locatio
 
 
 ## Pending Issues
-1. One of the intermediate library is not seamlessly loaded with user intervention. Add the directory of installation to $LD_LIBRARY_PATH
+1. One of the intermediate library is not seamlessly loaded with user intervention. Add the directory of installation to $LD_LIBRARY_PATH.
 The directory of the installation can be found from 
 ```bash
 python -c "import cylinder; print(cylinder.__path__)"
