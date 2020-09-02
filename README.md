@@ -48,4 +48,4 @@ print(dir(cylinder))
 
 ## Additional Details
 For additional details, refer to https://github.com/jameskermode/f90wrap/tree/master/examples/cylinder.
-Replace Example in https://github.com/jameskermode/f90wrap/blob/master/examples/cylinder/tests.py with cyl.
+Replace **Example** in https://github.com/jameskermode/f90wrap/blob/master/examples/cylinder/tests.py with **cylinder.cyl**.
