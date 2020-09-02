@@ -13,7 +13,6 @@ Note that there is a dot after install.
 ## Testing the code
 Unfortunately even though the code is correctly installed at the correct location, few issues are still pending.
 
- However it won't due to some pending issues. 
 
 ## Pending Issues
 1. One of the intermediate library is not seamlessly loaded with user intervention. Add the directory of installation to $LD_LIBRARY_PATH
