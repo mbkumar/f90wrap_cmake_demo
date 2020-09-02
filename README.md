@@ -34,6 +34,12 @@ to
 import cylinder._cyl as _cyl
 ```
 
+Now both lines should work
+```python
+import cylinder  # should work
+import cylinder.cyl # should work
+```
+
 3. The following code is not properly working because cylinder package is not fully populated with its contents
 ```python
 import cylinder
