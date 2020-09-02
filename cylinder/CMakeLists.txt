@@ -2,7 +2,7 @@
 
 #project(cylinder VERSION 1.0 LANGUAGES C CXX Fortran)
 #list(APPEND CMAKE_MODULE_PATH "/home/mbkumar/anaconda3/envs/testv/lib/python3.8/site-packages/skbuild/resources/cmake")
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+#list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 find_package(PythonExtensions REQUIRED)
 find_package(NumPy REQUIRED)
