@@ -131,7 +131,7 @@ add_custom_command(
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
 )
 
-install(FILES ${python_mod_file} ${generated_module_file}
+install(FILES ${python_mod_file} ${generated_module_file} ${CMAKE_CURRENT_SOURCE_DIR}/__init__.py
         DESTINATION cylinder
 )
 install(TARGETS cyl_lib 
