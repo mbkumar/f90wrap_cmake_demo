@@ -7,7 +7,7 @@ C and Fortran compilers. Tested with gcc suite. Some flags are specific to gcc s
 ```bash
 pip install .
 ```
-
+Note that there is a dot after install.
 
 
 ## Testing the code
