@@ -13,6 +13,11 @@ Note that there is a dot after install.
 ## Testing the code
 Unfortunately even though the code is correctly installed at the correct location, few issues are still pending.
 
+```python
+import cylinder  # should work
+import cylinder.cyl # will fail
+```
+
 
 ## Pending Issues
 1. One of the intermediate library is not seamlessly loaded with user intervention. Add the directory of installation to $LD_LIBRARY_PATH.
@@ -27,6 +32,12 @@ import _cyl
 to
 ```python
 import cylinder._cyl as _cyl
+```
+
+3. The following code is not properly working because cylinder package is not fully populated with its contents
+```python
+import cylinder
+print(dir(cylinder))
 ```
 
 ## Additional Details
