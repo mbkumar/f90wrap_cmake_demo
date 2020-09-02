@@ -40,12 +40,6 @@ import cylinder  # should work
 import cylinder.cyl # should work
 ```
 
-3. The following code is not properly working because cylinder package is not fully populated with its contents
-```python
-import cylinder
-print(dir(cylinder))
-```
-
 ## Additional Details
 For additional details, refer to https://github.com/jameskermode/f90wrap/tree/master/examples/cylinder.
 Replace **Example** in https://github.com/jameskermode/f90wrap/blob/master/examples/cylinder/tests.py with **cylinder.cyl**.
