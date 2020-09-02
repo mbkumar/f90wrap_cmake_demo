@@ -106,6 +106,12 @@ message(STATUS "f90_wrap_output_files: "  ${f90wrap_output_files})
 message(STATUS "f2py_module_name: ${f2py_module_name}")
 message(STATUS "generated_module_name: ${generated_module_file}")
 
+#set(CMAKE_BUILD_RPATH_USE_ORIGIN TRUE)
+set(CMAKE_INSTALL_RPATH $$ORIGIN)
+#set(CMAKE_SKIP_BUILD_PATH FALSE)
+#set(CMAKE_BUILD_WITH_INSTALL_RPATH FALSE)
+#set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}")
+#set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 include_directories("${NumPy_INCLUDE_DIRS}" "${F2PY_INCLUDE_DIRS}" "${CMAKE_CURRENT_BINARY_DIR}")
 add_custom_target(${f2py_module_name} ALL
   #DEPENDS ${generated_module_file} ${python_mod_name} cyl_lib ${f90wrap_output_files}
@@ -116,16 +122,16 @@ add_custom_command(
     OUTPUT ${generated_module_file}
     COMMAND ${F2PY_EXECUTABLE} 
         -m ${f2py_module_name} 
-        #--build-dir ${CMAKE_CURRENT_BINARY_DIR} 
+        --build-dir ${CMAKE_CURRENT_BINARY_DIR} 
         -c 
-        -L${CMAKE_CURRENT_BINARY_DIR} -lcyl_lib --build-dir ${CMAKE_CURRENT_BINARY_DIR} --verbose
+        -L. -lcyl_lib --verbose
         ${f90wrap_output_files} 
     #IMPLICIT_DEPENDS Fortran ${f90wrap_output_files}
     DEPENDS cyl_lib ${f90wrap_output_files}
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
 )
 
-install(FILES ${generated_module_file} ${python_mod_file}
+install(FILES ${python_mod_file} ${generated_module_file}
         DESTINATION cylinder
 )
 install(TARGETS cyl_lib 
