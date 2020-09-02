@@ -7,5 +7,5 @@ setup(
     version="0.0.1",
     packages=["cylinder"],
 
-    #install_requires=['cython']
+    install_requires=['f90wrap']
 )
