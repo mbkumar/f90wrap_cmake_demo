@@ -20,7 +20,7 @@ import cylinder.cyl # will fail
 
 
 ## Pending Issues
-1. One of the intermediate library is not seamlessly loaded with user intervention. Add the directory of installation to $LD_LIBRARY_PATH.
+1. One of the intermediate library is not seamlessly loaded with out user intervention. Add the directory of installation to $LD_LIBRARY_PATH.
 The directory of the installation can be found from 
 ```bash
 python -c "import cylinder; print(cylinder.__path__)"
@@ -33,7 +33,11 @@ to
 ```python
 import cylinder._cyl as _cyl
 ```
-
+or 
+```python
+from . import _cyl
+```
+.
 Now both lines should work
 ```python
 import cylinder  # should work
