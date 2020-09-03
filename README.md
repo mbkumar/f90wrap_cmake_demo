@@ -25,19 +25,7 @@ The directory of the installation can be found from
 ```bash
 python -c "import cylinder; print(cylinder.__path__)"
 ```
-2. Slight modification of the f90wrap generated cyl.py is required. Open the cyl.py from the path identified in the previous step and change the line containing 
-```python
-import _cyl 
-```
-to
-```python
-import cylinder._cyl as _cyl
-```
-or 
-```python
-from . import _cyl
-```
-.
+2. Slight modification of the f90wrap generated cyl.py is required. Open the cyl.py from the path identified in the previous step and change the line containing `import _cyl` to `import cylinder._cyl as _cyl` or `from . import _cyl`.
 Now both lines should work
 ```python
 import cylinder  # should work
